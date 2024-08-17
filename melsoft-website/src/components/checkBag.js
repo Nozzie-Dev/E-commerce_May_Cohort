@@ -18,7 +18,7 @@ const CheckBag = () => {
   };
 
   return (
-    <div className="container p-4">
+    <div className="container p-4 mt-5">
       <h3>Check your Bag Items</h3>
       <div className="card mb-3">
         <div className="row g-0">
@@ -46,15 +46,15 @@ const CheckBag = () => {
                   $1799.99 x <span>{quantity}</span>
                 </p>
                 <div className="d-flex align-items-center">
-                  <button 
-                    className="btn btn-outline-danger border-0 me-2" 
+                  <button
+                    className="btn btn-outline-danger border-0 me-2"
                     onClick={decreaseQuantity}
                   >
                     -
                   </button>
                   <span className="mx-2">{quantity}</span>
-                  <button 
-                    className="btn btn-outline-success border-0 ms-2" 
+                  <button
+                    className="btn btn-outline-success border-0 ms-2"
                     onClick={increaseQuantity}
                   >
                     +

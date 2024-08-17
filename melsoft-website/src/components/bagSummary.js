@@ -7,7 +7,7 @@ import Iphone1 from '../assets/Name=Iphone-12-01.png';
 
 const bagSummary = () => {
   return (
-    <div className="p-3 align-items-center" style={{
+    <div className="p-3 align-items-center mt-5" style={{
       width: '345px',
       height: '1024px',
       padding: '7px 8px 8px 8px',
