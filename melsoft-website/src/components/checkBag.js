@@ -1,7 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import dellxps from "../assets/Name=Dell-XPS-13-White.png";
 
-const checkBag = () => {
+const CheckBag = () => {
+  // Initialize state for quantity
+  const [quantity, setQuantity] = useState(1);
+
+  // Function to decrease quantity
+  const decreaseQuantity = () => {
+    if (quantity > 1) {
+      setQuantity(quantity - 1);
+    }
+  };
+
+  // Function to increase quantity
+  const increaseQuantity = () => {
+    setQuantity(quantity + 1);
+  };
+
   return (
     <div className="container p-4">
       <h3>Check your Bag Items</h3>
@@ -19,19 +34,32 @@ const checkBag = () => {
               <h5 className="card-title">Dell XPS 13</h5>
               <p className="card-text text-muted">White</p>
               <p className="card-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
-                aliquam.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam.
               </p>
               <p className="card-text">
                 <small className="text-muted">
-                  ★★★★★ <span>4.5/5 </span>
+                  ★★★★★ <span>4.5/5</span>
                 </small>
               </p>
-              <div className="d-flex align-items-center">
-                <p className="card-text">$1799.99 x 1</p>
-                <button className="btn btn-outline-danger me-2">-</button>
-                <span>1</span>
-                <button className="btn btn-outline-success ms-2">+</button>
+              <div className="d-flex align-items-center justify-content-between">
+                <p className="card-text mb-0">
+                  $1799.99 x <span>{quantity}</span>
+                </p>
+                <div className="d-flex align-items-center">
+                  <button 
+                    className="btn btn-outline-danger border-0 me-2" 
+                    onClick={decreaseQuantity}
+                  >
+                    -
+                  </button>
+                  <span className="mx-2">{quantity}</span>
+                  <button 
+                    className="btn btn-outline-success border-0 ms-2" 
+                    onClick={increaseQuantity}
+                  >
+                    +
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -41,4 +69,4 @@ const checkBag = () => {
   );
 };
 
-export default checkBag;
+export default CheckBag;

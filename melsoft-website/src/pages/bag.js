@@ -1,27 +1,12 @@
 import React from "react";
 import CheckBag from "../components/checkBag";
 import BagSummary from "../components/bagSummary";
+import SideBar from "../components/bagSideBar";
 
 const Bag = () => {
   return (
     <div className="d-flex">
-      <div className="col-2 p-0 bg-light">
-        {/**Replace with nav component */}
-        <nav className="nav flex-column">
-          <a className="nav-link active" href="#">
-            <i className="bi bi-house"></i>
-          </a>
-          <a className="nav-link" href="#">
-            <i className="bi bi-cart"></i>
-          </a>
-          <a className="nav-link" href="#">
-            <i className="bi bi-bag"></i>
-          </a>
-          <a className="nav-link" href="#">
-            <i className="bi bi-box"></i>
-          </a>
-        </nav>
-      </div>
+      <SideBar/>
       <div className="col-7">
         <CheckBag />
       </div>
