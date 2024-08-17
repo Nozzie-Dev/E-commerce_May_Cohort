@@ -16,7 +16,7 @@ const bagSummary = () => {
       flexDirection: 'column',
       gap: '10px'
     }}>
-      <h5 className="mb-4" style={{ marginBottom: '112px' }}>Bag</h5>
+      <h5 className="mb-4" style={{ marginBottom: '112px', fontSize: '30px' }}>Bag</h5>
       <div className="container">
         <div className="row">
           <div className="col-4 mb-3">
