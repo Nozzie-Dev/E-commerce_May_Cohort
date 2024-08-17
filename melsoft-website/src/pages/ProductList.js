@@ -41,7 +41,7 @@ const ProductList = () => {
         product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         product.description.toLowerCase().includes(searchQuery.toLowerCase())
     );
-    return (
+    return (        
         <div className='dashboard'>
             <Sidebar menuItems={['Home', 'Products', 'About Us']} /> {/* Sidebar on the left */}
             <div className="product-list-container">

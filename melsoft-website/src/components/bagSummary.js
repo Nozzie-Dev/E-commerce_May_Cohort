@@ -9,7 +9,7 @@ const bagSummary = () => {
   return (
     <div className="p-3 align-items-center mt-5" style={{
       width: '345px',
-      height: '1024px',
+      height: '80%',
       padding: '7px 8px 8px 8px',
       borderLeft: '2px solid gray',
       display: 'flex',

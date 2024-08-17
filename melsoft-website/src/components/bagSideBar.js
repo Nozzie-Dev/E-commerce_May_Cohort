@@ -9,12 +9,11 @@ const bagSideBar = () => {
   return (
     <div className="col-2 p-0 bg-light d-flex flex-column justify-content-between sidebar" style={{
       width: '72px',
-      height: '992px',
+      height: '100%',
       top: '16px',
       left: '16px',
       padding: '8px',
-      borderRadius: '8px',
-      position: 'relative'
+      borderRadius: '8px'
     }}>
       <nav className="nav flex-column">
         <a className="nav-link active" href="#">
