@@ -9,6 +9,8 @@ import iPhone2 from '../assets/Name=Iphone-12-02.png';
 import iPhone3 from '../assets/Name=Iphone-12-03.png';
 import iPhone4 from '../assets/Name=Iphone-12-04.png';
 import Search from '../components/SearchBar';
+import Sidebar from '../components/bagSideBar';
+import BagSummary from '../components/bagSummary';
 
 
 
@@ -41,25 +43,29 @@ const ProductList = () => {
     );
     return (
         <div className='dashboard'>
-            <Search onSearch={handleSearch} />
-            <div className="container">
-                <div className="row">
-                    {filteredProducts.map(product => (
-                        <div key={product.id} className="col-md-3 mb-4">
-                            <Product
-                                image={product.image}
-                                name={product.name}
-                                price={product.price}
-                                description={product.description}
-                                onAddToCart={() => handleAddToCart(product)}
-                            />
-                        </div>
-                    ))}
+            <Sidebar menuItems={['Home', 'Products', 'About Us']} /> {/* Sidebar on the left */}
+            <div className="product-list-container">
+                <Search onSearch={handleSearch} />
+                <div className="product-list">
+                    <div className="row">
+                        {filteredProducts.map(product => (
+                            <div key={product.id} className="col-md-3 mb-4">
+                                <Product
+                                    image={product.image}
+                                    name={product.name}
+                                    price={product.price}
+                                    description={product.description}
+                                    onAddToCart={() => handleAddToCart(product)}
+                                />
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
-            <div className='verticle'></div>
+            <BagSummary /> {/* BagSummary on the right */}
         </div>
     );
 };
+
 
 export default ProductList;

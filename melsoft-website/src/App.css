@@ -13,11 +13,13 @@ body {
 }
 
 
-.verticle {
-  width: 1px;
-  height: 100px;
-  position: absolute;
-  right: 50%;
+.sidebar {
+  width: 7px;
+  height: 100vh;
+  position: fixed;
+  left: 20;
+  top: 0;
+  z-index: 1;
 }
 
 .searchbar label {
@@ -43,16 +45,19 @@ body {
 
 
 .dashboard {
+  display: grid;
+  grid-template-columns: 7px 900px 300px;
+  grid-gap: 10px;
+  margin-left: 10px;
+  grid-template-rows: auto;
+  padding: 0;
   background-color: #EDEDED;
-  margin: auto;
-  display: block;
-  max-width: 900px;
-  margin-bottom: 50px;
+  margin-left: 100px;
 }
 
 .product .product-image {
   width: 180px;
-  height: 220x;
+  height: 220px;
   mix-blend-mode: multiply;
   /* border: 40px solid white;
   margin-right: 40px; */
@@ -60,6 +65,10 @@ body {
   display: block;
   align-items: center;
 
+}
+
+.product-list-container {
+  grid-column: 2;
 }
 
 .product .images {
@@ -94,4 +103,9 @@ body {
   color: white;
   background-color: white;
   border: 2px solid white;
+}
+
+.bag-summary {
+  grid-column: 3;
+  padding: 20px;
 }
