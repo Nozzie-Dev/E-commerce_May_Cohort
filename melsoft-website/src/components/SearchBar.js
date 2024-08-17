@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import '../App.css';
 
-
 const SearchBar = ({ onSearch }) => {
     const [query, setQuery] = useState('');
 
     const handleChange = (e) => {
-        setQuery(e.target.value);
-        onSearch(e.target.value);
+        const newQuery = e.target.value;
+        setQuery(newQuery);
+        onSearch(newQuery);
     };
 
     return (

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../App.css';
 import Product from '../components/Product';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -9,8 +9,8 @@ import iPhone2 from '../assets/Name=Iphone-12-02.png';
 import iPhone3 from '../assets/Name=Iphone-12-03.png';
 import iPhone4 from '../assets/Name=Iphone-12-04.png';
 import Search from '../components/SearchBar';
-// import iPhone5 from './images/Name=Iphone-12-Pro-01.png';
-// import iPhone6 from './images/Name=Iphone-12-Pro-02.png';
+
+
 
 const productData = [
     { id: 1, image: AppleWatch, name: 'Apple Watch', description: 'Series 5 SE', price: 529.99 },
@@ -21,7 +21,7 @@ const productData = [
     { id: 6, image: iPhone4, name: 'Iphone 11', description: 'Milky White', price: 619.99 },
     { id: 7, image: iPhone3, name: 'Iphone 13', description: 'Product RED', price: 619.99 },
     { id: 8, image: iPhone3, name: 'Iphone 14', description: 'Product RED', price: 619.99 },
-    // Add more products as needed
+
 ];
 
 const handleAddToCart = (product) => {
@@ -29,12 +29,22 @@ const handleAddToCart = (product) => {
 };
 
 const ProductList = () => {
+    const [searchQuery, setSearchQuery] = useState('');
+
+    const handleSearch = (query) => {
+        setSearchQuery(query);
+    };
+
+    const filteredProducts = productData.filter(product =>
+        product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        product.description.toLowerCase().includes(searchQuery.toLowerCase())
+    );
     return (
         <div className='dashboard'>
-            <Search />
+            <Search onSearch={handleSearch} />
             <div className="container">
                 <div className="row">
-                    {productData.map(product => (
+                    {filteredProducts.map(product => (
                         <div key={product.id} className="col-md-3 mb-4">
                             <Product
                                 image={product.image}
