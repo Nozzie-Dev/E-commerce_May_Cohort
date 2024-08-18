@@ -11,17 +11,9 @@
     "bootstrap-icons": "^1.11.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
     "react-redux": "^9.1.2",
->>>>>>> 5eed1fbcfa02d5fac6d2c2e02eb94953b6746032
     "react-scripts": "^5.0.1",
-    "script-react": "^1.1.0",
-=======
-    "react-scripts": "5.0.1",
     "script-react": "^1.2.4",
->>>>>>> Stashed changes
     "web-vitals": "^2.1.4"
   },
   "scripts": {
