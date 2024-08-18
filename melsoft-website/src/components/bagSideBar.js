@@ -56,7 +56,7 @@ const BagSideBar = () => {
       </nav>
       <a href="#" className="d-flex justify-content-center mb-3">
         <img src={logout} alt="Logout" style={{ width: '20px', height: '20px' }} />
-        {isOpen && <span className="ml-2">Logout</span>}
+        {isOpen}
       </a>
     </div>
   );
