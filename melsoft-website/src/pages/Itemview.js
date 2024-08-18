@@ -25,6 +25,7 @@ const ProductPage = () => {
         <div className="about">
           <div
             className="aboutTop">
+              <button>Back</button>
            <div className="product-page">
       <div className="product-image-container">
         <div className='product-image-cont'>
@@ -32,13 +33,13 @@ const ProductPage = () => {
         <img src={IconOnly} alt="Product Image" />
         <img src={IconOnly} alt="Product Image" />
         </div>
-        <img src={ProductImage} alt="Product Image" />
+        <img src={ProductImage} width="400" height="300" alt="Product Image" />
       </div>
       <div className='flex flex-col gap-4 lg:w-2/4'>
                 <div>
                     <h1 className='text-3xl font-bold'>Apple Watch</h1>
-                    <span className=' text-grey-700 font-semibold'>Series 5 SE</span>
-                    <div className='text-green-7'>
+                    <span className=' text-secondary font-bold'>Series 5 SE</span>
+                    <div className='text-success'>
                       <Rate defaultValue={4} allowHalf  style={{color: "green"}}/>
                       4.5/5
                       </div>
