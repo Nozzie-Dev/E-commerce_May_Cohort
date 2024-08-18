@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { addItemToCart } from '../Redux/cartSlice';
 import '../App.css';
 import Product from '../components/Product';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -26,24 +28,26 @@ const productData = [
 
 ];
 
-const handleAddToCart = (product) => {
-    console.log(`${product.name} added to cart`);
-};
-
 const ProductList = () => {
     const [searchQuery, setSearchQuery] = useState('');
+    const dispatch = useDispatch();
 
     const handleSearch = (query) => {
         setSearchQuery(query);
+    };
+
+    const handleAddToCart = (product) => {
+        dispatch(addItemToCart(product));
     };
 
     const filteredProducts = productData.filter(product =>
         product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         product.description.toLowerCase().includes(searchQuery.toLowerCase())
     );
-    return (        
+
+    return (
         <div className='dashboard'>
-            <Sidebar menuItems={['Home', 'Products', 'About Us']} /> {/* Sidebar on the left */}
+            <Sidebar menuItems={['Home', 'Products', 'About Us']} />
             <div className="product-list-container">
                 <Search onSearch={handleSearch} />
                 <div className="product-list">
@@ -55,17 +59,16 @@ const ProductList = () => {
                                     name={product.name}
                                     price={product.price}
                                     description={product.description}
-                                    onAddToCart={() => handleAddToCart(product)}
+                                    onAddToCart={() => handleAddToCart(product)} // Dispatch the action
                                 />
                             </div>
                         ))}
                     </div>
                 </div>
             </div>
-            <BagSummary /> {/* BagSummary on the right */}
+            <BagSummary />
         </div>
     );
 };
-
 
 export default ProductList;
