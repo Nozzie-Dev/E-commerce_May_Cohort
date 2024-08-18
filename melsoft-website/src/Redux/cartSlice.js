@@ -1,4 +1,4 @@
-// Import the createSlice function from @reduxjs/toolkit, which simplifies the process of creating a Redux slice.
+
 import { createSlice } from '@reduxjs/toolkit';
 
 // Define the initial state for the cart slice.
@@ -37,6 +37,5 @@ const cartSlice = createSlice({
 // These are functions that you can call in your components to dispatch the corresponding actions.
 export const { addItemToCart } = cartSlice.actions;
 
-// Export the reducer function that will be used in the Redux store.
 // This function will be called when actions are dispatched, and it will update the state accordingly.
 export default cartSlice.reducer;
