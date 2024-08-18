@@ -1,0 +1,376 @@
+/* Container */
+.container {
+  display: grid;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  padding: 16px 0 0 0;
+  box-sizing: border-box;
+}
+
+/* Order Summary */
+.order-summary {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 16px;
+  gap: 16px;
+
+  position: absolute;
+  width: 243px;
+  height: 319px;
+  left: 1075px;
+  top: 59px;
+
+  background: #FFFFFF;
+  border-radius: 12px;
+  opacity: 1; /* Adjusted from 0 to 1 for visibility */
+}
+
+/* Line 01 */
+.line-01 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0;
+  gap: 8px;
+
+  width: 138px;
+  height: 24px;
+}
+
+.line-01 h1 {
+  margin: 0;
+  font-family: 'Cabin', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+}
+
+/* Line 02 */
+.line-02 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  gap: 8px;
+
+  width: 211px;
+  height: 19px;
+}
+
+.line-02 span:first-child {
+  margin: 0;
+  width: 40px;
+  font-family: 'Cabin', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #60695C;
+}
+
+.line-02 span:last-child {
+  margin: 0;
+  width: 67px;
+  font-family: 'Cabin', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #60695C;
+}
+
+/* Line 03 */
+.line-03 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  gap: 8px;
+
+  width: 211px;
+  height: 19px;
+}
+
+.line-03 span:first-child {
+  margin: 0;
+  width: 61px;
+  font-family: 'Cabin', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #60695C;
+}
+
+.line-03 span:last-child {
+  margin: 0;
+  width: 42px;
+  font-family: 'Cabin', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #60695C;
+}
+
+/* Line 04 */
+.line-04 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  gap: 8px;
+
+  width: 211px;
+  height: 19px;
+}
+
+.line-04 span:first-child {
+  margin: 0;
+  width: 99px;
+  font-family: 'Cabin', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #60695C;
+}
+
+.line-04 span:last-child {
+  margin: 0;
+  width: 56px;
+  font-family: 'Cabin', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #60695C;
+}
+
+/* Line 05 */
+.line-05 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  gap: 8px;
+
+  width: 211px;
+  height: 19px;
+}
+
+.line-05 span:first-child {
+  margin: 0;
+  width: 61px;
+  font-family: 'Cabin', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #60695C;
+}
+
+.line-05 span:last-child {
+  margin: 0;
+  width: 48px;
+  font-family: 'Cabin', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #60695C;
+}
+
+/* Divider */
+.divider {
+  width: 211px;
+  height: 0;
+  border: 1px solid #BFD1E5;
+}
+
+/* Total */
+.total {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  gap: 8px;
+
+  width: 211px;
+  height: 24px;
+}
+
+.total span:first-child {
+  margin: 0;
+  width: 100px;
+  font-family: 'Cabin', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #E5252C;
+}
+
+.total span:last-child {
+  margin: 0;
+  width: 91px;
+  font-family: 'Cabin', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #E5252C;
+}
+
+/* Button */
+.place-order-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 24px;
+  gap: 8px;
+
+  width: 211px;
+  height: 35px;
+  background: #1A1F16;
+  border-radius: 11px;
+  border: none;
+  cursor: pointer;
+  color: #FFFFFF;
+  font-family: 'Cabin', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.place-order-btn:hover {
+  background: #0F0F0F; /* Optional: darker shade for hover effect */
+}
+/* Address Card Styling */
+.address-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 16px;
+  gap: 8px;
+  width: 871px;
+  height: 230px;
+  background: #FFFFFF;
+  border-radius: 13px;
+  margin-top: 20px; /* Optional, for spacing between sections */
+}
+
+.address-card h2 {
+  margin: 0;
+  margin-bottom: 8px; /* Space below the heading */
+}
+
+.address-card p {
+  margin: 0;
+  line-height: 1.2; /* Adjust line height to control the space within paragraphs */
+  margin-bottom: 2px;
+}
+
+.change-address-btn {
+  margin-top: 8px; /* Optional, spacing between address and button */
+  padding: 8px 16px;
+  background-color: #1b1b1c; /* Customize button color as needed */
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.change-address-btn:hover {
+  background-color: #0056b3; /* Darker shade for hover effect */
+}
+
+
+/* Review Your Bag Section */
+.review-bag {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 16px;
+  gap: 16px; /* Space between items */
+  width: 871px;
+  background: #FFFFFF;
+  border-radius: 13px;
+}
+
+.review-bag h1 {
+  margin: 0;
+}
+
+.items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px; /* Space between items in the grid */
+}
+
+.item-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 16px;
+  gap: 8px; /* Space between image and details */
+  background: #FFFFFF;
+  border-radius: 13px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow for better separation */
+}
+
+.item-image {
+  width: 100%; /* Responsive image width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px;
+}
+
+.item-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px; /* Space between details */
+}
+
+.item-btn {
+  margin-top: 8px;
+  padding: 8px 16px;
+  background-color: #0f1010; /* Customize button color */
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.item-btn:hover {
+  background-color: #0056b3; /* Darker shade for hover effect */
+}
+/* Subtitle/Small/Regular/Expanded */
+.subtitle-expanded {
+  width: 782px;
+  height: 20px;
+
+  /* Subtitle/Small/Regular/Expanded */
+  font-family: 'Cabin';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20.25px;
+  line-height: 38px; /* identical to box height */
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+
+  /* Font/Dark */
+  color: #1A1F16;
+
+  /* Inside auto layout */
+}
