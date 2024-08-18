@@ -47,7 +47,7 @@ const ProductList = () => {
 
     return (
         <div className='dashboard'>
-            <Sidebar menuItems={['Home', 'Products', 'About Us']} />
+            
             <div className="product-list-container">
                 <Search onSearch={handleSearch} />
                 <div className="product-list">

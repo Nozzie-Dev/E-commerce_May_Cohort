@@ -9,7 +9,7 @@ const Bag = () => {
     <div className="d-flex" style={{
       paddingLeft: '90px'}}>
         <div>
-          <SideBar />
+          
           </div>
       <div className="col-9">
         <CheckBag />
