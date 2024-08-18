@@ -11,6 +11,15 @@
     align-items: center;
     width: 50%;
   }
+  .product-image-cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    gap: 10px;
+    
+  }
   
   .product-image-container img {
     max-width: 100%;

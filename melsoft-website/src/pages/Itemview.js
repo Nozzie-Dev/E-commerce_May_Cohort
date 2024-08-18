@@ -3,7 +3,7 @@ import '../pages/Itemview.css'
 import IconOnly from "../assets/Type=Icon Only.png"
 import ProductImage from "../assets/Product-Image.png"
 import { Rate } from "antd"
-
+import icon from '../assets/Name=bag-add.png';
 
 
 const ProductPage = () => {
@@ -27,24 +27,29 @@ const ProductPage = () => {
             className="aboutTop">
            <div className="product-page">
       <div className="product-image-container">
+        <div className='product-image-cont'>
+          <img src={IconOnly} alt="Product Image" />
         <img src={IconOnly} alt="Product Image" />
         <img src={IconOnly} alt="Product Image" />
-        <img src={IconOnly} alt="Product Image" />
+        </div>
         <img src={ProductImage} alt="Product Image" />
       </div>
       <div className='flex flex-col gap-4 lg:w-2/4'>
                 <div>
                     <h1 className='text-3xl font-bold'>Apple Watch</h1>
                     <span className=' text-grey-700 font-semibold'>Series 5 SE</span>
-                    <div><Rate defaultValue={4} allowHalf  style={{color: "green"}}/></div>
+                    <div className='text-green-7'>
+                      <Rate defaultValue={4} allowHalf  style={{color: "green"}}/>
+                      4.5/5
+                      </div>
                 </div> 
                 <h6 className='text-4xl font-semibold'>$ 529.99</h6>
                 <p className='text-gray-700'>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br /> enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br />Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br />Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
                 </p>
                
-                <div className='flex flex-row items-center gap-12'>
-                    <button>Add to Bag</button>
+                <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+                    <button style={{color: 'White', backgroundColor: 'black'}}><img src={icon} alt=''/>Add to Bag</button>
                 </div>
             
             </div>
@@ -52,7 +57,13 @@ const ProductPage = () => {
             
           </div>
           <div className="aboutBottom">
-            <hr></hr>
+            <hr
+            style={{
+              background: "black",
+              color: "black",
+              borderColor: "black",
+              height: "3px",
+            }}/>
             <h1 className='text-3xl font-bold'> Description</h1>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
