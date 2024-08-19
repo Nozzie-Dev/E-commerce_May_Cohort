@@ -47,7 +47,6 @@ const ProductList = () => {
 
     return (
         <div className='dashboard'>
-            
             <div className="product-list-container">
                 <Search onSearch={handleSearch} />
                 <div className="product-list">
