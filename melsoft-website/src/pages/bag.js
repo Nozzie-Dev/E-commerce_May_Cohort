@@ -1,15 +1,18 @@
 import React from "react";
 import CheckBag from "../components/checkBag";
 import BagSummary from "../components/bagSummary";
+import Sidebar from '../components/bagSideBar';
 
 const Bag = () => {
   return (
     <div className="d-flex" style={{
       paddingLeft: '90px',
       backgroundColor: '#EDEDED',
-      minHeight: '100vh'}}>
-        <div>
-          </div>
+      minHeight: '100vh'
+    }}>
+      <div>
+        <Sidebar />
+      </div>
       <div className="col-9">
         <CheckBag />
       </div>
