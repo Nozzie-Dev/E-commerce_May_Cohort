@@ -11,7 +11,7 @@ import iPhone2 from '../assets/Name=Iphone-12-02.png';
 import iPhone3 from '../assets/Name=Iphone-12-03.png';
 import iPhone4 from '../assets/Name=Iphone-12-04.png';
 import Search from '../components/SearchBar';
-import Sidebar from '../components/bagSideBar';
+// import Sidebar from '../components/bagSideBar';
 import BagSummary from '../components/bagSummary';
 
 
