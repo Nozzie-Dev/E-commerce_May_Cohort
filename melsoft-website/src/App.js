@@ -6,6 +6,7 @@ import "./App.css";
 import BagSideBar from "./components/bagSideBar";
 import Bag from "./pages/bag";
 import ProductList from "./pages/ProductList";
+import Itemview from "./pages/Itemview";
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
         <Routes>
           <Route path="/" element={<ProductList />} />
           <Route path="/bag" element={<Bag />} />
+          <Route path="/Itemview" element={<Itemview />} />
+
         </Routes>
       </div>
     </Router>
