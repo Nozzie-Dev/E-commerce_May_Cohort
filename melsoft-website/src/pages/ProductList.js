@@ -16,6 +16,7 @@ import BagSummary from '../components/bagSummary';
 
 
 
+
 const productData = [
     { id: 1, image: AppleWatch, name: 'Apple Watch', description: 'Series 5 SE', price: 529.99 },
     { id: 2, image: HeadPhones, name: 'Sony ZX33OBT', description: 'Light Grey', price: 39.99 },

@@ -45,7 +45,7 @@ const BagSummary = () => {
         <span>Bag Total:</span>
         <span>${totalAmount.toFixed(2)}</span> {/* Display total amount */}
       </p>
-      <Link className='checkout' to="/Checkoutform">
+      <Link className='checkout' to="/Checkoutform" style={{ textDecoration: 'none' }}>
         <button
           className="btn btn-dark d-flex align-items-center"
           style={{

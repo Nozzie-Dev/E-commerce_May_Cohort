@@ -4,6 +4,9 @@ import IconOnly from "../assets/Type=Icon Only.png";
 import ProductImage from "../assets/Product-Image.png";
 import { Rate } from "antd";
 import icon from '../assets/Name=bag-add.png';
+import SideBar from '../components/bagSideBar';
+import BagSummary from '../components/bagSummary';
+import '../App.css';
 
 
 const ProductPage = () => {
@@ -23,6 +26,7 @@ const ProductPage = () => {
 
     return (
         <div className="about">
+            <SideBar />
             <div
                 className="aboutTop">
                 <button>Back</button>
