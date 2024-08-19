@@ -283,13 +283,20 @@
 }
 
 .change-address-btn {
-  margin-top: 8px; /* Optional, spacing between address and button */
-  padding: 8px 16px;
-  background-color: #1b1b1c; /* Customize button color as needed */
-  color: #ffffff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 24px;
+  gap: 8px;
+  width: 93px;
+  height: 35px;
+  border: 1px solid #1A1F16;
+  border-radius: 11px;
+  flex: none;
+  order: 2;
+  flex-grow: 0;
 }
 
 .change-address-btn:hover {
