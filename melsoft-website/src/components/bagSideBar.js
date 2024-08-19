@@ -6,6 +6,7 @@ import bag from "../assets/Name=bag-handle.png"
 import logout from "../assets/Name=log-out.png"
 import Store from '../assets/Nav-Link.png';
 import Close from '../assets/Name=close.png';
+import { Link } from 'react-router-dom';
 
 const BagSideBar = () => {
   const [isOpen, setIsOpen] = useState(false); // State to control sidebar visibility
@@ -37,7 +38,7 @@ const BagSideBar = () => {
             style={{ width: '20px', height: '20px' }}
           />
         </a>
-        <a className="nav-link" href="#">
+        <Link className="nav-link" to="/">
           <img
             src={isOpen ? Store : storefront}
             alt={isOpen ? "Store" : "Storefront"}
@@ -47,12 +48,12 @@ const BagSideBar = () => {
               transition: 'width 0.3s ease, height 0.3s ease'
             }}
           />
-        </a>
-        <a className="nav-link" href="#">
+        </Link>
+        <Link className="nav-link" to="/bag">
           <img src={bag} alt="Bag" style={{ width: '20px', height: '20px' }} />
           {isOpen && <span className="ml-2" style={{ color: 'black', fontSize: '20px' }}
           >Bag</span>}
-        </a>
+        </Link>
       </nav>
       <a href="#" className="d-flex justify-content-center mb-3">
         <img src={logout} alt="Logout" style={{ width: '20px', height: '20px' }} />
