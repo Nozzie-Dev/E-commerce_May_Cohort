@@ -1,4 +1,5 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './CheckoutForm.css';
 
 import dellXPS13Img from '../assets/Name=Dell-XPS-13-White.png';
@@ -37,95 +38,130 @@ const CheckoutForm = ({ items, shipping, gst, giftCard, total }) => {
                 <hr className="divider" />
                 <button type="submit" className="place-order-btn">Place your order</button>
             </section>
-            
-            <hr style = {{
+
+            <hr style={{
                 background: 'gray',
                 color: 'gray',
                 bordercolor: 'gray',
                 height: '10px',
             }}
-                />
-            
+            />
+
 
             {/* Shipping Address Section */}
             <section className="address-card">
-    <h1 className="subtitle-expanded">Shipping Address</h1>
+                <h1 className="subtitle-expanded pb-5">Shipping Address</h1>
+                <div className='row'>
+                    <div className='col-10'>
+                        <p>John Maker</p>
+                        <p>123 Plae Grond Stret</p>
+                        <p>Vermont, California</p>
+                        <p>United States of America</p>
+                    </div>
+                    <div className='col-2'>
+                        <button className="change-address-btn">Change</button>
+                    </div>
+                </div>
 
-    <p>John Maker</p>
-    <p>123 Plae Grond Stret</p>
-    <p>Vermont, California</p>
-    <p>United States of America</p>
-    <button className="change-address-btn">Change</button>
-</section> 
- {/* Payment Method Section */}
- <section className="address-card">
- <h1 className="subtitle-expanded">Payment Method</h1>
 
-                <p><i className="fas fa-credit-card"></i>Mastercard ending in 1252</p>
-                <p><i className="fas fa-gift"></i>Gift Card Balance</p>
-                <p>$ 53.21</p>
-                <p><i className="fas fa-address-card"></i>Billing Address</p>
-                <p>Billing address same as Shipping Address</p>
-                <button className="change-address-btn">Change</button>
+
+            </section>
+            {/* Payment Method Section */}
+            <section className="address-card mt-3">
+                <h1 className="subtitle-expanded pb-5">Payment Method</h1>
+                <div className='row'>
+                    <div className='col-10'>
+                        <p><i className="fas fa-credit-card"></i>Mastercard ending in 1252</p>
+                        <p><i className="fas fa-gift"></i>Gift Card Balance</p>
+                        <p>$ 53.21</p>
+                        <p><i className="fas fa-address-card"></i>Billing Address</p>
+                        <p>Billing address same as Shipping Address</p>
+                    </div>
+                    <div className='col-2'>
+                        <button className="change-address-btn">Change</button>
+                    </div></div>
             </section>
 
-             {/* Review Your Bag Section */}
-             <section className="review-bag">
-             <h1 className="subtitle-expanded">Review Your Bag</h1>
+            {/* Review Your Bag Section */}
+            <section className="review-bag mt-5">
+                <h1 className="subtitle-expanded pb-5">Review Your Bag</h1>
                 <div className="items-grid">
-                    <div className="item-card">
-                    <img src={dellXPS13Img} alt="Dell XPS 13" className="item-image" />
-                        <div className="item-details">
-                            <h3>Dell XPS 13</h3>
-                            <p>White</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam</p>
-                            <p>4.5 / 5</p>
-                            <p>$ 1799.99</p>
-                            <p>Quantity: 1</p>
-                            <button className="item-btn">Remove</button>
+                    <div className="item-card ">
+                        <div className='row'>
+                            <div className='col'>
+                                <img src={dellXPS13Img} alt="Dell XPS 13" className="item-image" />
+                            </div>
+                            <div className='col'>
+                                <div className="item-details">
+                                    <h3>Dell XPS 13</h3>
+                                    <p>White</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam</p>
+                                    <p>4.5 / 5</p>
+                                    <p>$ 1799.99</p>
+                                    <p>Quantity: 1</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    <hr />
                     <div className="item-card">
-                    <img src={iphone11NavyImg} alt="iphone11NavyImg" className="item-image" />
-                        <div className="item-details">
-                            <h3>Iphone 11</h3>
-                            <p>Navy Blue</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam</p>
-                            <p>4.5 / 5</p>
-                            <p>$ 729.99</p>
-                            <p>Quantity: 3</p>
-                            <button className="item-btn">Remove</button>
+                        <div className='row'>
+                            <div className='col'>
+                                <img src={iphone11NavyImg} alt="iphone11NavyImg" className="item-image" />
+                            </div>
+                            <div className='col'>
+                                <div className="item-details">
+                                    <h3>Iphone 11</h3>
+                                    <p>Navy Blue</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam</p>
+                                    <p>4.5 / 5</p>
+                                    <p>$ 729.99</p>
+                                    <p>Quantity: 3</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    <hr />
                     <div className="item-card">
-                    <img src={iphone11WhiteImg} alt="iphone11WWhiteImg" className="item-image" />
-                        <div className="item-details">
-                            <h3>Iphone 11</h3>
-                            <p>Milky White</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam</p>
-                            <p>4.5 / 5</p>
-                            <p>$ 619.99</p>
-                            <p>Quantity: 1</p>
-                            <button className="item-btn">Remove</button>
+                        <div className='row'>
+                            <div className='col'>
+                                <img src={iphone11WhiteImg} alt="iphone11WWhiteImg" className="item-image" />
+                            </div>
+                            <div className='col'>
+                                <div className="item-details">
+                                    <h3>Iphone 11</h3>
+                                    <p>Milky White</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam</p>
+                                    <p>4.5 / 5</p>
+                                    <p>$ 619.99</p>
+                                    <p>Quantity: 1</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    <hr />
                     <div className="item-card">
-                    <img src={iphone11BlackImg } alt="iphone11BlackImg " className="item-image" />
-                        <div className="item-details">
-                            <h3>Iphone 11</h3>
-                            <p>Serious Black</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam</p>
-                            <p>4.5 / 5</p>
-                            <p>$ 619.99</p>
-                            <p>Quantity: 2</p>
-                            <button className="item-btn">Remove</button>
+                        <div className='row'>
+                            <div className='col'>
+                                <img src={iphone11BlackImg} alt="iphone11BlackImg " className="item-image" />
+                            </div>
+                            <div className='col'>
+                                <div className="item-details">
+                                    <h3>Iphone 11</h3>
+                                    <p>Serious Black</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam</p>
+                                    <p>4.5 / 5</p>
+                                    <p>$ 619.99</p>
+                                    <p>Quantity: 2</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
         </div>
-    
-        
+
+
     );
 };
 

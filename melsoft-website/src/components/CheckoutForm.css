@@ -332,7 +332,7 @@
 }
 
 .items-grid {
-  display: grid;
+  /* display: grid; */
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 16px;
   /* Space between items in the grid */
@@ -352,9 +352,9 @@
 }
 
 .item-image {
-  width: 100%;
+  width: 270px;
   /* Responsive image width */
-  height: auto;
+  height: 250px;
   /* Maintain aspect ratio */
   border-radius: 8px;
 }
@@ -393,7 +393,6 @@
   font-weight: 400;
   font-size: 30px;
   line-height: 38px;
-  padding-bottom: 20px;
   /* identical to box height */
   letter-spacing: 0.25em;
   text-transform: uppercase;
