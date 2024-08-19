@@ -7,6 +7,7 @@ import BagSideBar from "./components/bagSideBar";
 import Bag from "./pages/bag";
 import ProductList from "./pages/ProductList";
 import Itemview from "./pages/Itemview";
+import Checkout from "./components/CheckoutForm";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" element={<ProductList />} />
           <Route path="/bag" element={<Bag />} />
           <Route path="/Itemview" element={<Itemview />} />
+          <Route path="/Checkoutform" element={<Checkout />} />
 
         </Routes>
       </div>

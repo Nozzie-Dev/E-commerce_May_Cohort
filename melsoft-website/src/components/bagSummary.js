@@ -1,6 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import bag from "../assets/Name=bag-handle.png";
+import { Link } from 'react-router-dom';
 
 const BagSummary = () => {
   // Get items from the Redux store
@@ -44,19 +45,21 @@ const BagSummary = () => {
         <span>Bag Total:</span>
         <span>${totalAmount.toFixed(2)}</span> {/* Display total amount */}
       </p>
-      <button
-        className="btn btn-dark d-flex align-items-center"
-        style={{
-          width: "100%",
-          maxWidth: "139px",
-          height: "40px",
-          padding: "8px 24px",
-          borderRadius: "14px",
-          gap: "8px",
-        }}
-      >
-        <img src={bag} alt="Cart" style={{ width: "20px", height: "20px" }} /> Checkout
-      </button>
+      <Link className='checkout' to="/Checkoutform">
+        <button
+          className="btn btn-dark d-flex align-items-center"
+          style={{
+            width: "100%",
+            maxWidth: "139px",
+            height: "40px",
+            padding: "8px 24px",
+            borderRadius: "14px",
+            gap: "8px",
+          }}
+        >
+          <img src={bag} alt="Cart" style={{ width: "20px", height: "20px" }} /> Checkout
+        </button>
+      </Link>
     </div>
   );
 };

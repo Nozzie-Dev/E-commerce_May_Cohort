@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../App.css';
 import menu from "../assets/Name=menu.png"
 import storefront from "../assets/Name=storefront.png"
 import logo from "../assets/Type=Transparent.png"
@@ -17,7 +18,7 @@ const BagSideBar = () => {
 
   return (
     <div
-      className={`sidebar ${isOpen ? 'open' : 'closed'} col-2 p-0 bg-light d-flex flex-column justify-content-between`}
+      className={`sidebar ${isOpen ? 'open' : 'closed'} col-2 p-0 bg-light d-flex flex-column justify-content-between sidebar`}
       style={{
         width: isOpen ? '130px' : '72px',
         height: '100%',

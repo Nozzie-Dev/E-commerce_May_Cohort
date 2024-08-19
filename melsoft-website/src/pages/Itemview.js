@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import '../Itemview.css'
-import IconOnly from "../assets/Type=Icon Only.png"
-import ProductImage from "../assets/Product-Image.png"
-import { Rate } from "antd"
+import '../Itemview.css';
+import IconOnly from "../assets/Type=Icon Only.png";
+import ProductImage from "../assets/Product-Image.png";
+import { Rate } from "antd";
 import icon from '../assets/Name=bag-add.png';
 
 
