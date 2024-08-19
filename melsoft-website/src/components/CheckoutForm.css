@@ -6,6 +6,8 @@
   width: 100%;
   padding: 16px 0 0 0;
   box-sizing: border-box;
+  background-color: #EDEDED;
+  min-width: 100%;
 }
 
 /* Order Summary */
@@ -19,12 +21,13 @@
   position: absolute;
   width: 243px;
   height: 319px;
-  left: 1075px;
-  top: 59px;
+  left: 1085px;
+  top: 80px;
 
   background: #FFFFFF;
   border-radius: 12px;
-  opacity: 1; /* Adjusted from 0 to 1 for visibility */
+  opacity: 1;
+  /* Adjusted from 0 to 1 for visibility */
 }
 
 /* Line 01 */
@@ -255,30 +258,36 @@
 }
 
 .place-order-btn:hover {
-  background: #0F0F0F; /* Optional: darker shade for hover effect */
+  background: #0F0F0F;
+  /* Optional: darker shade for hover effect */
 }
+
 /* Address Card Styling */
 .address-card {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding: 16px;
+  margin-right: 160px;
   gap: 8px;
   width: 871px;
   height: 230px;
   background: #FFFFFF;
   border-radius: 13px;
-  margin-top: 20px; /* Optional, for spacing between sections */
+  margin-top: 20px;
+  /* Optional, for spacing between sections */
 }
 
 .address-card h2 {
   margin: 0;
-  margin-bottom: 8px; /* Space below the heading */
+  margin-bottom: 8px;
+  /* Space below the heading */
 }
 
 .address-card p {
   margin: 0;
-  line-height: 1.2; /* Adjust line height to control the space within paragraphs */
+  line-height: 1.2;
+  /* Adjust line height to control the space within paragraphs */
   margin-bottom: 2px;
 }
 
@@ -300,7 +309,8 @@
 }
 
 .change-address-btn:hover {
-  background-color: #0056b3; /* Darker shade for hover effect */
+  background-color: #0056b3;
+  /* Darker shade for hover effect */
 }
 
 
@@ -310,7 +320,8 @@
   flex-direction: column;
   align-items: flex-start;
   padding: 16px;
-  gap: 16px; /* Space between items */
+  gap: 16px;
+  /* Space between items */
   width: 871px;
   background: #FFFFFF;
   border-radius: 13px;
@@ -323,7 +334,8 @@
 .items-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 16px; /* Space between items in the grid */
+  gap: 16px;
+  /* Space between items in the grid */
 }
 
 .item-card {
@@ -331,28 +343,34 @@
   flex-direction: column;
   align-items: flex-start;
   padding: 16px;
-  gap: 8px; /* Space between image and details */
+  gap: 8px;
+  /* Space between image and details */
   background: #FFFFFF;
   border-radius: 13px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow for better separation */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Optional: Adds a subtle shadow for better separation */
 }
 
 .item-image {
-  width: 100%; /* Responsive image width */
-  height: auto; /* Maintain aspect ratio */
+  width: 100%;
+  /* Responsive image width */
+  height: auto;
+  /* Maintain aspect ratio */
   border-radius: 8px;
 }
 
 .item-details {
   display: flex;
   flex-direction: column;
-  gap: 4px; /* Space between details */
+  gap: 4px;
+  /* Space between details */
 }
 
 .item-btn {
   margin-top: 8px;
   padding: 8px 16px;
-  background-color: #0f1010; /* Customize button color */
+  background-color: #0f1010;
+  /* Customize button color */
   color: #ffffff;
   border: none;
   border-radius: 4px;
@@ -360,8 +378,10 @@
 }
 
 .item-btn:hover {
-  background-color: #0056b3; /* Darker shade for hover effect */
+  background-color: #0056b3;
+  /* Darker shade for hover effect */
 }
+
 /* Subtitle/Small/Regular/Expanded */
 .subtitle-expanded {
   width: 782px;
@@ -371,8 +391,10 @@
   font-family: 'Cabin';
   font-style: normal;
   font-weight: 400;
-  font-size: 20.25px;
-  line-height: 38px; /* identical to box height */
+  font-size: 30px;
+  line-height: 38px;
+  padding-bottom: 20px;
+  /* identical to box height */
   letter-spacing: 0.25em;
   text-transform: uppercase;
 
