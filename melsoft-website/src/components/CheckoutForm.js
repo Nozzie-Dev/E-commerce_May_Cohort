@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import back from '../assets/Name=chevron-back.png';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
-
+import icon from '../assets/Selected=True.png';
 import dellXPS13Img from '../assets/Name=Dell-XPS-13-White.png';
 import iphone11NavyImg from '../assets/Name=Iphone-12-Pro-02.png';
 import iphone11WhiteImg from '../assets/Name=Iphone-13-Pro-03.png';
@@ -79,7 +79,7 @@ const CheckoutForm = ({ items, shipping, gst, giftCard, total }) => {
                         <p><i className="fas fa-credit-card"></i>Mastercard ending in 1252</p>
                         <p><i className="fas fa-gift"></i>Gift Card Balance</p>
                         <p>$ 53.21</p>
-                        <p><i className="fas fa-address-card"></i>Billing address same as Shipping Address</p>
+                        <p><img src={icon} alt='icon' />Billing address same as Shipping Address</p>
                     </div>
                     <div className='col-2'>
                         <button className="change-address-btn">Change</button>
