@@ -5,15 +5,17 @@ import { useNavigate } from 'react-router-dom';
 import back from '../assets/Name=chevron-back.png';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
-
 import dellXPS13Img from '../assets/Name=Dell-XPS-13-White.png';
 import iphone11NavyImg from '../assets/Name=Iphone-12-Pro-02.png';
 import iphone11WhiteImg from '../assets/Name=Iphone-13-Pro-03.png';
 import iphone11BlackImg from '../assets/Name=Iphone-13-Pro-02.png';
 
 const CheckoutForm = ({ items, shipping, gst, giftCard, total }) => {
-
     const navigate = useNavigate();
+
+    const changePayment = () => {
+        navigate('/payment');
+    };
 
     return (
         <div className="container">
@@ -51,14 +53,7 @@ const CheckoutForm = ({ items, shipping, gst, giftCard, total }) => {
                 </button>
             </section>
 
-            <hr style={{
-                background: 'gray',
-                color: 'gray',
-                bordercolor: 'gray',
-                height: '10px',
-            }}
-            />
-
+            <hr style={{ background: 'gray', color: 'gray', borderColor: 'gray', height: '10px' }} />
 
             {/* Shipping Address Section */}
             <section className="address-card">
@@ -74,10 +69,8 @@ const CheckoutForm = ({ items, shipping, gst, giftCard, total }) => {
                         <button className="change-address-btn">Change</button>
                     </div>
                 </div>
-
-
-
             </section>
+
             {/* Payment Method Section */}
             <section className="address-card mt-3">
                 <h1 className="subtitle-expanded pb-5">Payment Method</h1>
@@ -89,15 +82,16 @@ const CheckoutForm = ({ items, shipping, gst, giftCard, total }) => {
                         <p><i className="fas fa-address-card"></i>Billing address same as Shipping Address</p>
                     </div>
                     <div className='col-2'>
-                        <button className="change-address-btn">Change</button>
-                    </div></div>
+                        <button className="change-address-btn" onClick={changePayment}>Change</button>
+                    </div>
+                </div>
             </section>
 
             {/* Review Your Bag Section */}
             <section className="review-bag mt-5">
                 <h1 className="subtitle-expanded pb-5">Review Your Bag</h1>
                 <div className="items-grid">
-                    <div className="item-card ">
+                    <div className="item-card">
                         <div className='row'>
                             <div className='col'>
                                 <img src={dellXPS13Img} alt="Dell XPS 13" className="item-image" />
@@ -154,7 +148,7 @@ const CheckoutForm = ({ items, shipping, gst, giftCard, total }) => {
                     <div className="item-card">
                         <div className='row'>
                             <div className='col'>
-                                <img src={iphone11BlackImg} alt="iphone11BlackImg " className="item-image" />
+                                <img src={iphone11BlackImg} alt="iphone11BlackImg" className="item-image" />
                             </div>
                             <div className='col'>
                                 <div className="item-details">
@@ -171,10 +165,7 @@ const CheckoutForm = ({ items, shipping, gst, giftCard, total }) => {
                 </div>
             </section>
         </div>
-
-
     );
 };
 
 export default CheckoutForm;
-
