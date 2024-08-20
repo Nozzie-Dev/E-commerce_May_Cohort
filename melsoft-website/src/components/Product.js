@@ -14,7 +14,7 @@ const Product = ({ image, name, description, price, onAddToCart }) => {
             <h2 className="product-name">{name}</h2>
             <p className="product-description">{description}</p>
             <p className="product-price">${price.toFixed(2)}</p>
-            <img src={icon} onClick={onAddToCart} className="add-to-cart-button" />
+            <img src={icon} onClick={onAddToCart} className="add-to-cart-button" alt='icon' />
 
         </div>
     );
