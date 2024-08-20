@@ -55,13 +55,6 @@ const CheckoutForm = ({ items, shipping, gst, giftCard, total }) => {
                 </button>
             </section>
 
-            <hr style={{
-                background: 'gray',
-                color: 'gray',
-                bordercolor: 'gray',
-                height: '10px',
-            }}
-            />
 
 
             {/* Shipping Address Section */}
