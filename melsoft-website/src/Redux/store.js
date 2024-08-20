@@ -1,14 +1,14 @@
 
-// This function simplifies the setup of a Redux store by automatically configuring the store with good default settings.
 import { configureStore } from '@reduxjs/toolkit';
 
-
+// This function simplifies the setup of a Redux store by automatically configuring the store with good default settings.
 // This reducer will handle all the state updates related to the cart.
 import cartReducer from './cartSlice';
 
 
 // The store is where all the state of the application lives.
 const store = configureStore({
+
     // The reducer option allows you to define all the slices of state your application needs.
     // Each slice is handled by a specific reducer function.
     reducer: {
