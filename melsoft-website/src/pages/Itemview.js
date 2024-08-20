@@ -64,7 +64,7 @@ const ProductPage = () => {
                             <h1 className='text-3xl font-bold'>Apple Watch</h1>
                             <span className='text-secondary font-bold'>Series 5 SE</span>
                             <div className='text-success'>
-                                <Rate defaultValue={4} allowHalf style={{ color: "green" }} />
+                                <Rate defaultValue={4.5} allowHalf style={{ color: "green" }} />
                                 4.5/5
                             </div>
                         </div>
@@ -81,7 +81,7 @@ const ProductPage = () => {
                             </select>
                         </div>
                         <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-                            <button 
+                            <button
                                 style={{ color: 'White', backgroundColor: 'black', borderRadius: '12px' }}
                                 onClick={handleAddToCart}
                             >

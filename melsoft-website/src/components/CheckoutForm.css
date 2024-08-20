@@ -295,7 +295,7 @@
 
 .address-card p {
   margin: 0;
-  line-height: 20px;
+  line-height: 25px;
   /* Adjust line height to control the space within paragraphs */
   margin-bottom: 2px;
 }
@@ -305,7 +305,7 @@
 }
 
 .color-text {
-  color: #a09e9e;
+  color: #838282;
 }
 
 .change-address-btn {
