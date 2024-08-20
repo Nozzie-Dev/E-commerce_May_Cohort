@@ -70,7 +70,7 @@ const ProductPage = () => {
                         </div>
                         <h6 className='text-4xl font-semibold'>$ 529.99</h6>
                         <p className='text-gray-700'>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br /> enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br />Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br />Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
                         </p>
                         <div>
                             <label>Select Size:</label>
@@ -104,7 +104,15 @@ const ProductPage = () => {
                         mollitia, molestiae quas vel sint commodi repudiandae consequuntur
                         voluptatum laborum numquam blanditiis harum quisquam eius sed odit
                         fugiat iusto fuga praesentium optio, eaque rerum! Provident similique
-                        accusantium nemo autem.
+                        accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut
+                        molestias architecto voluptate aliquam nihil, eveniet aliquid culpa
+                        officia aut! Impedit sit sunt quaerat, odit, tenetur error, harum
+                        nesciunt ipsum debitis quas aliquid. Reprehenderit, quia. Quo neque
+                        error repudiandae fuga? Ipsa laudantium molestias eos sapiente
+                        officiis modi at sunt excepturi expedita sint? Sed quibusdam
+                        recusandae alias error harum maxime adipisci amet laborum.
+                        Perspiciatis minima nesciunt dolorem! Officiis iure rerum voluptates a
+                        cumque velit
                     </p>
                 </div>
             </div>
