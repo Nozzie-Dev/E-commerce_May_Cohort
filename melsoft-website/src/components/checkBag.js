@@ -1,6 +1,7 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { updateItemQuantity } from "../Redux/cartSlice";
+import { Rate } from "antd";
 
 const CheckBag = () => {
   // Access the cart items from the Redux store
@@ -43,9 +44,10 @@ const CheckBag = () => {
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam.
                   </p>
                   <p className="card-text">
-                    <small className="text-muted">
-                      ★★★★★ <span>4.5/5</span>
-                    </small>
+                    <div className='text-success'>
+                      <Rate defaultValue={4.5} allowHalf style={{ color: "green" }} />
+                      4.5 / 5
+                    </div>
                   </p>
                   <div className="d-flex align-items-center justify-content-between">
                     <p className="card-text mb-0">
