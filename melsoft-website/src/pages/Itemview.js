@@ -5,8 +5,9 @@ import ProductImage from "../assets/Product-Image.png";
 import { Rate } from "antd";
 import icon from '../assets/Name=bag-add.png';
 import SideBar from '../components/bagSideBar';
-import BagSummary from '../components/bagSummary';
+import { useNavigate } from 'react-router-dom';
 import '../App.css';
+import back from '../assets/Name=chevron-back.png';
 
 
 const ProductPage = () => {
@@ -24,20 +25,25 @@ const ProductPage = () => {
         }
     }
 
+    const navigate = useNavigate();
+
     return (
         <div className="about">
             <SideBar />
             <div
                 className="aboutTop">
-                <button>Back</button>
+                <button type='button' onClick={() => navigate(-1)} className='back-button'>
+                    <img src={back} alt='back' />
+                    Back
+                </button>
                 <div className="product-page">
                     <div className="product-image-container">
                         <div className='product-image-cont'>
-                            <img src={IconOnly} alt="Product Image" />
-                            <img src={IconOnly} alt="Product Image" />
-                            <img src={IconOnly} alt="Product Image" />
+                            <img src={IconOnly} alt="Product" />
+                            <img src={IconOnly} alt="Product" />
+                            <img src={IconOnly} alt="Product" />
                         </div>
-                        <img src={ProductImage} width="400" height="300" alt="Product Image" />
+                        <img src={ProductImage} width="400" height="300" alt="Product" />
                     </div>
                     <div className='flex flex-col gap-4 lg:w-2/4'>
                         <div>
