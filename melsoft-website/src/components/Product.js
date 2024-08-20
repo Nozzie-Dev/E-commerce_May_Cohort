@@ -10,11 +10,12 @@ const Product = ({ image, name, description, price, onAddToCart }) => {
                 <div className='images'>
                     <img src={image} alt={name} className="product-image" />
                 </div>
-                <h2 className="product-name">{name}</h2>
-                <p className="product-description">{description}</p>
-                <p className="product-price">${price.toFixed(2)}</p>
-                <img src={icon} onClick={onAddToCart} className="add-to-cart-button" />
             </Link>
+            <h2 className="product-name">{name}</h2>
+            <p className="product-description">{description}</p>
+            <p className="product-price">${price.toFixed(2)}</p>
+            <img src={icon} onClick={onAddToCart} className="add-to-cart-button" />
+
         </div>
     );
 };
