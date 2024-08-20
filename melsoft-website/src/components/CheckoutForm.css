@@ -10,6 +10,13 @@
   min-width: 100%;
 }
 
+.order-summary .backbutton {
+  border: 1px solid #a09e9e;
+  font-size: 20px;
+  padding: 5px 20px;
+  border-radius: 12px;
+}
+
 /* Order Summary */
 .order-summary {
   display: flex;

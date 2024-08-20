@@ -1,6 +1,8 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './CheckoutForm.css';
+import { useNavigate } from 'react-router-dom';
+import back from '../assets/Name=chevron-back.png';
 
 import dellXPS13Img from '../assets/Name=Dell-XPS-13-White.png';
 import iphone11NavyImg from '../assets/Name=Iphone-12-Pro-02.png';
@@ -8,6 +10,9 @@ import iphone11WhiteImg from '../assets/Name=Iphone-13-Pro-03.png';
 import iphone11BlackImg from '../assets/Name=Iphone-13-Pro-02.png';
 
 const CheckoutForm = ({ items, shipping, gst, giftCard, total }) => {
+
+    const navigate = useNavigate();
+
     return (
         <div className="container">
             <section className="order-summary">
@@ -37,6 +42,11 @@ const CheckoutForm = ({ items, shipping, gst, giftCard, total }) => {
                 </div>
                 <hr className="divider" />
                 <button type="submit" className="place-order-btn">Place your order</button>
+
+                <button type='button' onClick={() => navigate(-1)} className='backbutton'>
+                    <img src={back} alt='back' />
+                    Back
+                </button>
             </section>
 
             <hr style={{
