@@ -106,7 +106,7 @@ const CheckoutForm = ({ items, shipping, gst, giftCard, total }) => {
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam</p>
                                     <div className='text-success'>
                                         <Rate defaultValue={4.5} allowHalf style={{ color: "green" }} />
-                                        4.5/5
+                                        4.5 / 5
                                     </div>
                                     <div className="d-flex align-items-center justify-content-between">
                                         <p className="card-text mb-0">
@@ -143,7 +143,7 @@ const CheckoutForm = ({ items, shipping, gst, giftCard, total }) => {
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam</p>
                                     <div className='text-success'>
                                         <Rate defaultValue={4.5} allowHalf style={{ color: "green" }} />
-                                        4.5/5
+                                        4.5 / 5
                                     </div>
                                     <div className="d-flex align-items-center justify-content-between">
                                         <p className="card-text mb-0">
@@ -217,7 +217,7 @@ const CheckoutForm = ({ items, shipping, gst, giftCard, total }) => {
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam</p>
                                     <div className='text-success'>
                                         <Rate defaultValue={4.5} allowHalf style={{ color: "green" }} />
-                                        4.5/5
+                                        4.5 / 5
                                     </div>
                                     <div className="d-flex align-items-center justify-content-between">
                                         <p className="card-text mb-0">
