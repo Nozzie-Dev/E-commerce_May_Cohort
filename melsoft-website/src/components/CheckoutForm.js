@@ -4,8 +4,8 @@ import './CheckoutForm.css';
 import { useNavigate } from 'react-router-dom';
 import back from '../assets/Name=chevron-back.png';
 import '@fortawesome/fontawesome-free/css/all.min.css';
-
-
+// import { useSelector, useDispatch } from "react-redux";
+// import { updateItemQuantity } from "../Redux/cartSlice";
 import dellXPS13Img from '../assets/Name=Dell-XPS-13-White.png';
 import iphone11NavyImg from '../assets/Name=Iphone-12-Pro-02.png';
 import iphone11WhiteImg from '../assets/Name=Iphone-13-Pro-03.png';
@@ -14,6 +14,8 @@ import iphone11BlackImg from '../assets/Name=Iphone-13-Pro-02.png';
 const CheckoutForm = ({ items, shipping, gst, giftCard, total }) => {
 
     const navigate = useNavigate();
+
+
 
     return (
         <div className="container">
@@ -45,6 +47,8 @@ const CheckoutForm = ({ items, shipping, gst, giftCard, total }) => {
                 <hr className="divider" />
                 <button type="submit" className="place-order-btn">Place your order</button>
 
+
+
                 <button type='button' onClick={() => navigate(-1)} className='backbutton'>
                     <img src={back} alt='back' />
                     Back
@@ -63,14 +67,14 @@ const CheckoutForm = ({ items, shipping, gst, giftCard, total }) => {
             {/* Shipping Address Section */}
             <section className="address-card">
                 <h1 className="subtitle-expanded pb-5">Shipping Address</h1>
-                <div className='row'>
+                <div className='row leads'>
                     <div className='col-10'>
                         <p>John Maker</p>
                         <p>123 Plae Grond Stret</p>
                         <p>Vermont, California</p>
                         <p>United States of America</p>
                     </div>
-                    <div className='col-2'>
+                    <div className='col-2 address'>
                         <button className="change-address-btn">Change</button>
                     </div>
                 </div>
@@ -81,14 +85,17 @@ const CheckoutForm = ({ items, shipping, gst, giftCard, total }) => {
             {/* Payment Method Section */}
             <section className="address-card mt-3">
                 <h1 className="subtitle-expanded pb-5">Payment Method</h1>
-                <div className='row'>
+                <div className='row leads'>
                     <div className='col-10'>
-                        <p><i className="fas fa-credit-card"></i>Mastercard ending in 1252</p>
-                        <p><i className="fas fa-gift"></i>Gift Card Balance</p>
-                        <p>$ 53.21</p>
-                        <p><i className="fas fa-address-card"></i>Billing address same as Shipping Address</p>
+                        <p><i className="fas fa-credit-card"></i> Mastercard
+                            <span className='gift-card'> ending in 1252</span>
+                        </p>
+                        <p><i className="fas fa-gift"></i> $ 53.21
+                            <span className='gift-card'> gift card balance</span>
+                        </p>
+                        <p><i className="fas fa-address-card"></i> Billing address same as Shipping Address</p>
                     </div>
-                    <div className='col-2'>
+                    <div className='col-2 address'>
                         <button className="change-address-btn">Change</button>
                     </div></div>
             </section>
@@ -105,11 +112,27 @@ const CheckoutForm = ({ items, shipping, gst, giftCard, total }) => {
                             <div className='col'>
                                 <div className="item-details">
                                     <h3>Dell XPS 13</h3>
-                                    <p>White</p>
+                                    <span className='color-text'>White</span>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam</p>
                                     <p>4.5 / 5</p>
-                                    <p>$ 1799.99</p>
-                                    <p>Quantity: 1</p>
+                                    <div className="d-flex align-items-center justify-content-between">
+                                        <p className="card-text mb-0">
+                                            $ 1799.99 x <span> 1</span>
+                                        </p>
+                                        <div className="d-flex align-items-center">
+                                            <button
+                                                className="btn btn-outline-danger border-0 me-2"
+                                            >
+                                                -
+                                            </button>
+                                            <span className="mx-2">1</span>
+                                            <button
+                                                className="btn btn-outline-success border-0 ms-2"
+                                            >
+                                                +
+                                            </button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -123,11 +146,27 @@ const CheckoutForm = ({ items, shipping, gst, giftCard, total }) => {
                             <div className='col'>
                                 <div className="item-details">
                                     <h3>Iphone 11</h3>
-                                    <p>Navy Blue</p>
+                                    <span className='color-text'>Navy Blue</span>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam</p>
                                     <p>4.5 / 5</p>
-                                    <p>$ 729.99</p>
-                                    <p>Quantity: 3</p>
+                                    <div className="d-flex align-items-center justify-content-between">
+                                        <p className="card-text mb-0">
+                                            $ 1799.99 x <span> 1</span>
+                                        </p>
+                                        <div className="d-flex align-items-center">
+                                            <button
+                                                className="btn btn-outline-danger border-0 me-2"
+                                            >
+                                                -
+                                            </button>
+                                            <span className="mx-2">1</span>
+                                            <button
+                                                className="btn btn-outline-success border-0 ms-2"
+                                            >
+                                                +
+                                            </button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -141,11 +180,27 @@ const CheckoutForm = ({ items, shipping, gst, giftCard, total }) => {
                             <div className='col'>
                                 <div className="item-details">
                                     <h3>Iphone 11</h3>
-                                    <p>Milky White</p>
+                                    <span className='color-text'>Milky White</span>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam</p>
                                     <p>4.5 / 5</p>
-                                    <p>$ 619.99</p>
-                                    <p>Quantity: 1</p>
+                                    <div className="d-flex align-items-center justify-content-between">
+                                        <p className="card-text mb-0">
+                                            $ 1799.99 x <span> 1</span>
+                                        </p>
+                                        <div className="d-flex align-items-center">
+                                            <button
+                                                className="btn btn-outline-danger border-0 me-2"
+                                            >
+                                                -
+                                            </button>
+                                            <span className="mx-2">1</span>
+                                            <button
+                                                className="btn btn-outline-success border-0 ms-2"
+                                            >
+                                                +
+                                            </button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -159,11 +214,27 @@ const CheckoutForm = ({ items, shipping, gst, giftCard, total }) => {
                             <div className='col'>
                                 <div className="item-details">
                                     <h3>Iphone 11</h3>
-                                    <p>Serious Black</p>
+                                    <span className='color-text'>Serious Black</span>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam</p>
                                     <p>4.5 / 5</p>
-                                    <p>$ 619.99</p>
-                                    <p>Quantity: 2</p>
+                                    <div className="d-flex align-items-center justify-content-between">
+                                        <p className="card-text mb-0">
+                                            $ 1799.99 x <span> 1</span>
+                                        </p>
+                                        <div className="d-flex align-items-center">
+                                            <button
+                                                className="btn btn-outline-danger border-0 me-2"
+                                            >
+                                                -
+                                            </button>
+                                            <span className="mx-2">1</span>
+                                            <button
+                                                className="btn btn-outline-success border-0 ms-2"
+                                            >
+                                                +
+                                            </button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
