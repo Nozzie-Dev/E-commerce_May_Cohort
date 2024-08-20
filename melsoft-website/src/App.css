@@ -12,6 +12,22 @@ body {
   min-width: 100%;
 }
 
+.product-page-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.main-content {
+  flex: 1;
+  padding: 110px;
+}
+
+.bag-summary {
+  width: 300px; 
+  padding: 20px;
+  min-height: 100vh;
+}
+
 
 .sidebar {
   width: 7px;
