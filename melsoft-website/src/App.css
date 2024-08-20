@@ -101,9 +101,10 @@ body {
 .product .add-to-cart-button {
   display: inline-block;
   color: white;
-  background-color: white;
-  border: 2px solid white;
+  background-color: rgb(8, 8, 8);
+  border: 2px solid rgb(8, 8, 8);
   border-radius: 5px;
+  padding: 2px;
 }
 
 .bag-summary {

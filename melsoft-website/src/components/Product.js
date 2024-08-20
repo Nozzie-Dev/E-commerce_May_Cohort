@@ -1,5 +1,5 @@
 import React from 'react';
-import icon from '../assets/Name=bag-add.png';
+import icon from '../assets/Vector.png';
 import '../App.css';
 import { Link } from 'react-router-dom';
 
