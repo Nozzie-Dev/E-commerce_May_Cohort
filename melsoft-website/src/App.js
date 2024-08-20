@@ -7,6 +7,8 @@ import Bag from "./pages/bag";
 import ProductList from "./pages/ProductList";
 import Itemview from "./pages/Itemview";
 import Checkout from "./components/CheckoutForm";
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
 
 function App() {
   return (
