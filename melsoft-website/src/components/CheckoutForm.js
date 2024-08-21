@@ -8,7 +8,7 @@ import { Rate } from "antd";
 import { useSelector, useDispatch } from "react-redux";
 import { updateItemQuantity } from "../Redux/cartSlice";
 import icon from '../assets/Selected=True.png';
-import { Link } from 'react-router-dom';
+
 
 const CheckoutForm = () => {
     const navigate = useNavigate();
@@ -20,6 +20,10 @@ const CheckoutForm = () => {
     const proceedToAddress = () => {
         navigate('/address');
     };
+
+    const confirmation = () => {
+        navigate('/confirmation');
+    }
     // Access the cart items from the Redux store
     const cartItems = useSelector((state) => state.cart.items);
     const dispatch = useDispatch();
@@ -67,7 +71,7 @@ const CheckoutForm = () => {
                     <div className='redux-info'>${(totalAmount + 6.99 + 760.41).toFixed(2)}</div>
                 </div>
                 <hr className="divider" />
-                <button type="submit" className="place-order-btn">Place your order</button>
+                <button type="submit" className="place-order-btn" onClick={confirmation}>Place your order</button>
 
                 <button type='button' onClick={() => navigate(-1)} className='backbutton'>
                     <img src={back} alt='back' />

@@ -72,3 +72,35 @@ body {
     color: #02D693;
     font-weight: 600;
 }
+
+.confirmation-page {
+    background: #EDEDED;
+    min-width: 100%;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    padding: 50px 0 200px 0;
+}
+
+.confirmation-page h1 {
+    margin-bottom: 50px;
+    font-size: 40px;
+}
+
+.confirmation-page img {
+    width: 200px;
+    display: block;
+    margin: auto;
+}
+
+.confirmation-page .message {
+    font-size: 25px;
+    color: black;
+    margin-top: 10px;
+}
+
+.confirmation-page .message1 {
+    font-size: 20px;
+    color: rgb(73, 73, 73);
+
+}
