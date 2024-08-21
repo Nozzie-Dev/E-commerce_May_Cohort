@@ -16,23 +16,23 @@ const AddressPage = () => {
                     <form>
                         <div class="mb-3">
                             <label for="exampleInputEmail1" className="form-label">Shipping Name</label>
-                            <input type="name" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                            <input type="name" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='John Maker' />
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" className="form-label">Street Name</label>
-                            <input type="name" className="form-control" id="exampleInputPassword1 " />
+                            <input type="name" className="form-control" id="exampleInputPassword1 " placeholder='123 Plae Grond Street' />
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" className="form-label">City</label>
-                            <input type="name" className="form-control" id="exampleInputPassword1 " />
+                            <input type="name" className="form-control" id="exampleInputPassword1 " placeholder='Vermont' />
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" className="form-label">State/Province</label>
-                            <input type="name" className="form-control" id="exampleInputPassword1 " />
+                            <input type="name" className="form-control" id="exampleInputPassword1 " placeholder='California' />
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" className="form-label">Country</label>
-                            <input type="name" className="form-control" id="exampleInputPassword1 " />
+                            <input type="name" className="form-control" id="exampleInputPassword1 " placeholder='United States of America' />
                         </div>
                         <div class="mb-3 form-check">
                             <p className='saving'> <img src={icon} alt="icon" />  Save this as your default address</p>
