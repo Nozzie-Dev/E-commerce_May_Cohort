@@ -15,7 +15,11 @@ const CheckoutForm = () => {
 
     const handleNewCard = () => {
         navigate('/payment');
-      };
+    };
+
+    const proceedToAddress = () => {
+        navigate('/address');
+    };
     // Access the cart items from the Redux store
     const cartItems = useSelector((state) => state.cart.items);
     const dispatch = useDispatch();
@@ -83,9 +87,9 @@ const CheckoutForm = () => {
                     </div>
 
                     <div className='col-2'>
-                        <Link to="/address" style={{ textDecoration: "none" }}>
-                            <button className="change-address-btn">Change</button>
-                        </Link>
+
+                        <button className="change-address-btn" onClick={proceedToAddress}>Change</button>
+
                     </div>
 
                 </div>
@@ -105,7 +109,7 @@ const CheckoutForm = () => {
                         <p><img src={icon} alt='icon' /> Billing address same as Shipping Address</p>
                     </div>
                     <div className='col-2'>
-                        <button className="change-address-btn"  onClick={handleNewCard}>Change</button>
+                        <button className="change-address-btn" onClick={handleNewCard}>Change</button>
                     </div>
                 </div>
             </section>

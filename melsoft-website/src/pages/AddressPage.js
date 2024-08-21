@@ -39,7 +39,7 @@ const AddressPage = () => {
                         </div>
                         <button type="submit" class="btn-primary add-address mb-4">Add Address</button>
                         <div className='back-btn'>
-                            <button onClick={() => navigate(-1)} className='backbutton'>
+                            <button onClick={() => navigate('/Checkoutform')} className='backbutton'>
                                 Back
                             </button></div>
                         <div className='connection'>Secure Connection</div>
