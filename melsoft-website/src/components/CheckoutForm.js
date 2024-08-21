@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './CheckoutForm.css';
 import { useNavigate } from 'react-router-dom';
@@ -9,9 +9,19 @@ import { useSelector, useDispatch } from "react-redux";
 import { updateItemQuantity } from "../Redux/cartSlice";
 import icon from '../assets/Selected=True.png';
 
-
 const CheckoutForm = () => {
     const navigate = useNavigate();
+    const [newCard, setNewCard] = useState(null);
+
+    useEffect(() => {
+        // Retrieve the stored card data
+        const storedCard = sessionStorage.getItem('newCard');
+        if (storedCard) {
+            setNewCard(JSON.parse(storedCard));
+            // Clear the stored card data
+            sessionStorage.removeItem('newCard');
+        }
+    }, []);
 
     const handleNewCard = () => {
         navigate('/payment');
@@ -23,7 +33,8 @@ const CheckoutForm = () => {
 
     const confirmation = () => {
         navigate('/confirmation');
-    }
+    };
+
     // Access the cart items from the Redux store
     const cartItems = useSelector((state) => state.cart.items);
     const dispatch = useDispatch();
@@ -91,11 +102,8 @@ const CheckoutForm = () => {
                     </div>
 
                     <div className='col-2'>
-
                         <button className="change-address-btn" onClick={proceedToAddress}>Change</button>
-
                     </div>
-
                 </div>
             </section>
 
@@ -104,9 +112,15 @@ const CheckoutForm = () => {
                 <h1 className="subtitle-expanded pb-5">Payment Method</h1>
                 <div className='row leads'>
                     <div className='col-10'>
-                        <p><i className="fas fa-credit-card"></i> Mastercard
-                            <span className='gift-card'> ending in 1252</span>
-                        </p>
+                        {newCard ? (
+                            <p className='paymentMethodDetails'><i className="fas fa-credit-card"></i> {newCard.type}
+                                <span className='gift-card'> ending in {newCard.last4}</span>
+                            </p>
+                        ) : (
+                            <p className='paymentMethodDetails'><i className="fas fa-credit-card"></i> Mastercard
+                                <span className='gift-card'> ending in 1252</span>
+                            </p>
+                        )}
                         <p><i className="fas fa-gift"></i> $53.21
                             <span className='gift-card'> gift card balance</span>
                         </p>
