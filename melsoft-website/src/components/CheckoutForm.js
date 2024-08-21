@@ -12,6 +12,13 @@ import icon from '../assets/Selected=True.png';
 const CheckoutForm = () => {
     const navigate = useNavigate();
     const [newCard, setNewCard] = useState(null);
+    const [address, setAddress] = useState({
+        name: '',
+        street: '',
+        city: '',
+        state: '',
+        country: ''
+    });
 
     useEffect(() => {
         // Retrieve the stored card data
@@ -20,6 +27,12 @@ const CheckoutForm = () => {
             setNewCard(JSON.parse(storedCard));
             // Clear the stored card data
             sessionStorage.removeItem('newCard');
+        }
+
+        // Retrieve the stored address data
+        const storedAddress = sessionStorage.getItem('address');
+        if (storedAddress) {
+            setAddress(JSON.parse(storedAddress));
         }
     }, []);
 
@@ -95,10 +108,10 @@ const CheckoutForm = () => {
                 <h1 className="subtitle-expanded pb-5">Shipping Address</h1>
                 <div className='row leads'>
                     <div className='col-10'>
-                        <p>John Maker</p>
-                        <p>123 Plae Grond Stret</p>
-                        <p>Vermont, California</p>
-                        <p>United States of America</p>
+                        <p>{address.name}</p>
+                        <p>{address.street}</p>
+                        <p>{address.city}, {address.state}</p>
+                        <p>{address.country}</p>
                     </div>
 
                     <div className='col-2'>
