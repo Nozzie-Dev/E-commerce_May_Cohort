@@ -6,7 +6,6 @@ import Sidebar from '../components/bagSideBar';
 const Bag = () => {
   return (
     <div className="d-flex" style={{
-      paddingLeft: '90px',
       backgroundColor: '#EDEDED',
       minHeight: '100vh'
     }}>
