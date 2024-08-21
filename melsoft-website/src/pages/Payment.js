@@ -61,93 +61,132 @@ const Payment = () => {
             expiryDate: '',
             cvc: ''
         });
-
-       
     };
 
     return (
-        <div className="container mt-5">
+        <div className="container mt-5" style={{ paddingTop: '0', paddingBottom: '0' }}>
             {/* Card Selection Section */}
-            <div className="card mb-4" style={{ borderRadius: '13px', width: '676px' }}>
+            <div className="card mb-4" style={{ borderRadius: '12px', boxShadow: '0 2px 4px rgba(0,0,0,0.1)', width: '100%', maxWidth: '600px' }}>
                 <div className="card-body">
                     <h5 className="card-title">SELECT A CARD</h5>
                     {cards.map((card, index) => (
                         <div key={index} className="form-check mb-2 d-flex align-items-center" style={{ gap: '8px' }}>
-                            <img src={CardIcon} alt="Card" style={{ width: '24px', height: '24px' }} />
-                            <label className="form-check-label">
-                                {card.type} ending in {card.last4}
-                            </label>
-                        </div>
+                        <img 
+                            src={CardIcon} 
+                            alt="Card" 
+                            style={{ width: '24px', height: '24px', filter: 'grayscale(100%)' }} 
+                        />
+                        <label className="form-check-label" style={{ color: 'gray' }}>
+                            {card.type} ending in {card.last4}
+                        </label>
+                    </div>
+                    
                     ))}
                 </div>
             </div>
 
             {/* Add a New Card Section */}
-            <div className="card" style={{ borderRadius: '13px', width: '676px' }}>
+            <div className="card" style={{ borderRadius: '12px', boxShadow: '0 2px 4px rgba(0,0,0,0.1)', width: '100%', maxWidth: '600px' }}>
                 <div className="card-body">
                     <h5 className="card-title">ADD A NEW CARD</h5>
                     <form onSubmit={handleSubmit}>
-                        <div className="mb-3">
-                            <label htmlFor="cardholderName" className="form-label">Cardholder Name</label>
-                            <input 
-                                type="text" 
-                                className="form-control" 
-                                id="cardholderName" 
-                                placeholder="John Maker" 
-                                value={cardDetails.cardholderName}
-                                onChange={handleChange} 
-                            />
-                        </div>
+                    <div className="mb-3">
+    <label 
+        htmlFor="cardholderName" 
+        className="form-label" 
+        style={{ color: 'gray' }}
+    >
+        Cardholder Name
+    </label>
+    <input 
+        type="text" 
+        className="form-control" 
+        id="cardholderName" 
+        placeholder="John Maker" 
+        value={cardDetails.cardholderName}
+        onChange={handleChange} 
+        style={{ 
+            color: 'gray', 
+            boxShadow: '0px 4px 15px rgba(167, 166, 166, 0.5)' 
+        }} 
+    />
+</div>
 
-                        <div className="mb-3">
-                            <label htmlFor="cardNumber" className="form-label">Card Number</label>
-                            <input 
-                                type="text" 
-                                className="form-control" 
-                                id="cardNumber" 
-                                placeholder="5126-5987-2214-7621" 
-                                style={{ 
-                                    backgroundImage: `url(${CardIcon})`, 
-                                    backgroundRepeat: 'no-repeat', 
-                                    backgroundPosition: '10px center', 
-                                    paddingLeft: '40px' 
-                                }} 
-                                value={cardDetails.cardNumber}
-                                onChange={handleChange} 
-                            />
-                        </div>
+<div className="mb-3">
+    <label 
+        htmlFor="cardNumber" 
+        className="form-label" 
+        style={{ color: 'gray' }}
+    >
+        Card Number
+    </label>
+    <input 
+        type="text" 
+        className="form-control" 
+        id="cardNumber" 
+        placeholder="5126-5987-2214-7621" 
+        style={{ 
+            backgroundImage: `url(${CardIcon})`, 
+            backgroundRepeat: 'no-repeat', 
+            backgroundPosition: '10px center', 
+            paddingLeft: '40px', 
+            color: 'gray', 
+            boxShadow: '0px 4px 15px rgba(167, 166, 166, 0.5)' 
+        }} 
+        value={cardDetails.cardNumber}
+        onChange={handleChange} 
+    />
+</div>
 
-                        <div className="row mb-3">
-                            <div className="col">
-                                <label htmlFor="expiryDate" className="form-label">Expiry Date</label>
-                                <input 
-                                    type="text" 
-                                    className="form-control" 
-                                    id="expiryDate" 
-                                    placeholder="MM / YYYY" 
-                                    style={{ 
-                                        backgroundImage: `url(${calendar})`, 
-                                        backgroundRepeat: 'no-repeat', 
-                                        backgroundPosition: '10px center', 
-                                        paddingLeft: '40px' 
-                                    }} 
-                                    value={cardDetails.expiryDate}
-                                    onChange={handleChange} 
-                                />
-                            </div>
+<div className="row mb-3">
+    <div className="col">
+        <label 
+            htmlFor="expiryDate" 
+            className="form-label" 
+            style={{ color: 'gray' }}
+        >
+            Expiry Date
+        </label>
+        <input 
+            type="text" 
+            className="form-control" 
+            id="expiryDate" 
+            placeholder="MM / YYYY" 
+            style={{ 
+                backgroundImage: `url(${calendar})`, 
+                backgroundRepeat: 'no-repeat', 
+                backgroundPosition: '10px center', 
+                paddingLeft: '40px', 
+                color: 'gray', 
+                boxShadow: '0px 4px 15px rgba(167, 166, 166, 0.5)' 
+            }} 
+            value={cardDetails.expiryDate}
+            onChange={handleChange} 
+        />
+    </div>
 
-                            <div className="col">
-                                <label htmlFor="cvc" className="form-label">CVC</label>
-                                <input 
-                                    type="text" 
-                                    className="form-control" 
-                                    id="cvc" 
-                                    placeholder="123" 
-                                    value={cardDetails.cvc}
-                                    onChange={handleChange} 
-                                />
-                            </div>
-                        </div>
+    <div className="col">
+        <label 
+            htmlFor="cvc" 
+            className="form-label" 
+            style={{ color: 'gray' }}
+        >
+            CVC
+        </label>
+        <input 
+            type="text" 
+            className="form-control" 
+            id="cvc" 
+            placeholder="123" 
+            style={{ 
+                color: 'gray', 
+                boxShadow: '0px 4px 15px rgba(167, 166, 166, 0.5)' 
+            }} 
+            value={cardDetails.cvc}
+            onChange={handleChange} 
+        />
+    </div>
+</div>
 
                         {error && <div className="alert alert-danger" role="alert">{error}</div>}
 
@@ -163,22 +202,16 @@ const Payment = () => {
                             Add Payment Method
                         </button>
 
-                        <div className="d-flex justify-content-between align-items-center">
+                        <div className="d-flex justify-content-between align-items-center mt-3">
                         <button 
     type="button" 
-    style={{
-        background: 'transparent', 
-        border: 'none', 
-        color: '#000', 
-        padding: '0', 
-        fontSize: '16px', 
-        textAlign: 'left', 
-        cursor: 'pointer'
-    }} 
+    className="btn btn-link" 
     onClick={() => navigate('/Checkoutform')}
+    style={{ color: 'black' }}
 >
     Back
 </button>
+
 
                             <div className="text-success">
                                 <i className="fas fa-lock"></i> Secure Connection
