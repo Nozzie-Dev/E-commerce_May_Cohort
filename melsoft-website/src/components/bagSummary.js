@@ -15,7 +15,7 @@ const BagSummary = () => {
       className="p-3 align-items-center mt-5"
       style={{
         width: "100%",
-        height: "98%",
+        height: "95%",
         padding: "7px 8px 8px 8px",
         borderLeft: "2px solid gray",
         display: 'flex',
