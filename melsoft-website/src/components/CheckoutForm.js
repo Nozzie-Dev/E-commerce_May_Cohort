@@ -8,6 +8,7 @@ import { Rate } from "antd";
 import { useSelector, useDispatch } from "react-redux";
 import { updateItemQuantity } from "../Redux/cartSlice";
 import icon from '../assets/Selected=True.png';
+import { Link } from 'react-router-dom';
 
 const CheckoutForm = () => {
     const navigate = useNavigate();
@@ -76,9 +77,13 @@ const CheckoutForm = () => {
                         <p>Vermont, California</p>
                         <p>United States of America</p>
                     </div>
+
                     <div className='col-2'>
-                        <button className="change-address-btn">Change</button>
+                        <Link to="/address" style={{ textDecoration: "none" }}>
+                            <button className="change-address-btn">Change</button>
+                        </Link>
                     </div>
+
                 </div>
             </section>
 
