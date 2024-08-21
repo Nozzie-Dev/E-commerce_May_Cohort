@@ -42,7 +42,7 @@ const AddressPage = () => {
                             <button onClick={() => navigate('/Checkoutform')} className='backbutton'>
                                 Back
                             </button></div>
-                        <div className='connection'>Secure Connection</div>
+                        <div className='connection'><i class="fas fa-lock"></i>  Secure Connection</div>
                     </form>
                 </div>
             </div>
