@@ -15,11 +15,11 @@ const BagSummary = () => {
       className="p-3 align-items-center mt-5"
       style={{
         width: "100%",
-        height: "100%",
+        height: "98%",
         padding: "7px 8px 8px 8px",
         borderLeft: "2px solid gray",
-       display:'flex',
-       flexDirection: 'column',
+        display: 'flex',
+        flexDirection: 'column',
         gap: "10px",
       }}
     >
@@ -41,8 +41,8 @@ const BagSummary = () => {
         </div>
       </div>
       <p className="d-flex justify-content-around align-items-center">
-       <strong><span>Bag Total:</span>
-        <span>${totalAmount.toFixed(2)}</span> {/* Display total amount */}</strong> 
+        <strong><span>Bag Total:</span>
+          <span>${totalAmount.toFixed(2)}</span> {/* Display total amount */}</strong>
       </p>
       <Link className='checkout' to="/Checkoutform" style={{ textDecoration: 'none' }}>
         <button
@@ -56,7 +56,7 @@ const BagSummary = () => {
             gap: "8px",
           }}
         >
-          <img src={bag} alt="Cart" style={{filter: 'brightness(0) invert(1)', width: "20px", height: "20px" }} /> Checkout
+          <img src={bag} alt="Cart" style={{ filter: 'brightness(0) invert(1)', width: "20px", height: "20px" }} /> Checkout
         </button>
       </Link>
     </div>
