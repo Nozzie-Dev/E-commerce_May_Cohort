@@ -63,12 +63,18 @@ body {
 
 .dashboard {
   display: grid;
-  grid-template-columns: 7px 900px 300px;
+  grid-template-columns: 72px 953px 345px;
   grid-gap: 10px;
   grid-template-rows: auto;
   padding: 0;
   background-color: #EDEDED;
   margin-left: 140px;
+}
+
+@media(min-width: 1000px) {
+  .dashboard {
+    grid-template-columns: 7px 900px 300px;
+  }
 }
 
 .product .product-image {
