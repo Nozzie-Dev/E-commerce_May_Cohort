@@ -11,6 +11,10 @@ import icon from '../assets/Selected=True.png';
 
 const CheckoutForm = () => {
     const navigate = useNavigate();
+
+    const handleNewCard = () => {
+        navigate('/payment');
+      };
     // Access the cart items from the Redux store
     const cartItems = useSelector((state) => state.cart.items);
     const dispatch = useDispatch();
@@ -96,7 +100,7 @@ const CheckoutForm = () => {
                         <p><img src={icon} alt='icon' /> Billing address same as Shipping Address</p>
                     </div>
                     <div className='col-2'>
-                        <button className="change-address-btn">Change</button>
+                        <button className="change-address-btn"  onClick={handleNewCard}>Change</button>
                     </div>
                 </div>
             </section>
