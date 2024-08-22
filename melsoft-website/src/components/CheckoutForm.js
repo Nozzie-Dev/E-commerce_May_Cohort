@@ -108,10 +108,10 @@ const CheckoutForm = () => {
                 <h1 className="subtitle-expanded pb-5">Shipping Address</h1>
                 <div className='row leads'>
                     <div className='col-10'>
-                        <p>{address.name}</p>
-                        <p>{address.street}</p>
-                        <p>{address.city}, {address.state}</p>
-                        <p>{address.country}</p>
+                        <p>{address.name || 'John Maker'}</p>
+                        <p>{address.street || '123 Plae Grond Street'}</p>
+                        <p>{address.city || 'Vermont, California'}, {address.state || 'Default State'}</p>
+                        <p>{address.country || 'United States of America'}</p>
                     </div>
 
                     <div className='col-2'>
@@ -119,7 +119,6 @@ const CheckoutForm = () => {
                     </div>
                 </div>
             </section>
-
             {/* Payment Method Section */}
             <section className="address-card mt-3">
                 <h1 className="subtitle-expanded pb-5">Payment Method</h1>
