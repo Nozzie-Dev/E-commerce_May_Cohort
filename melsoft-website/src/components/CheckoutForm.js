@@ -110,7 +110,7 @@ const CheckoutForm = () => {
                     <div className='col-10'>
                         <p>{address.name || 'John Maker'}</p>
                         <p>{address.street || '123 Plae Grond Street'}</p>
-                        <p>{address.city || 'Vermont, California'}, {address.state || 'Default State'}</p>
+                        <p>{address.city || 'Vermont'}, {address.state || 'California'}</p>
                         <p>{address.country || 'United States of America'}</p>
                     </div>
 
